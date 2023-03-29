@@ -1,0 +1,10 @@
+.btn{
+   margin: 2%;
+   text-align: center;
+}
+.quotes{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
