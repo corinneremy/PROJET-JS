@@ -1,0 +1,56 @@
+@import url(https://fonts.bunny.net/css?family=bebas-neue:400);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', display;
+    background-color: black;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+section{
+    padding: 10px;
+    width: 450px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px black;
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+.full_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+input{
+    width: 90%;
+    padding: 10px;
+    height: 39px;
+    border: 1px solid gray;
+    outline: 0;
+    border-radius: 6px 0 0 6px;
+    color: white;
+}
+button{
+    width: 10%;
+    font-size: 20px;
+    height: 39px;
+    border: 0;
+    background-color: #e50914;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c11119;
+    transition: 0.7s;
+}
