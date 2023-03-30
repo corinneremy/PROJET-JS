@@ -1,33 +1,36 @@
-.container {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 20px;
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 h1 {
-	text-align: center;
-}
+    text-align: center;
+    box-sizing: content-box;
+    position:relative;
 
-form {
-	display: flex;
-	flex-direction: column;
 }
 
 label {
-	margin-top: 10px;
+    font-size: 1.2em;
 }
 
-input[type="text"],
-input[type="number"],
-select {
-	margin-bottom: 10px;
+textarea {
+    width: 60%;
+    height: 20px;
 }
 
-button {
-	margin-top: 20px;
-	align-self: center;
+#output {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#resultat {
-	margin-top: 20px;
+.group {
+    background-color: #ee9cea;
+    border: 1px solid #8b5ef5;
+    border-radius: 6px;
+    border-width: 1.8px;
+    padding: 10px;
+    margin: 5px;
 }

@@ -1,33 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
+<head>
     <title>Group Maker</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Générateur de groupe</h1>
-      <form>
-        <label for="nom">Nom du groupe :</label>
-        <input type="text" id="nom" name="nom" /><br />
-
-        <label for="membres">Nombre de membres :</label>
-        <input type="number" id="membres" name="membres" /><br />
-        <label for="genre">Genre :</label>
-        <select id="genre" name="genre">
-          <option value="mixte">Mixte</option>
-          <option value="masculin">Masculin</option>
-          <option value="féminin">Féminin</option></select
-        ><br />
-        <button type="button" onclick="generer()">Générer</button>
-      </form>
-
-      <div id="resultat"></div>
-    </div>
-
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Générateur de groupes</h1>
+    <label>Entrez les noms séparés par des virgules</label><br>
+    <textarea id="input"></textarea><br><br>
+    <button onclick="makeGroups()">Créer les groupes</button><br><br>
+    <label>Nombre de groupes:</label><br>
+    <input type="number" id="groupCount"><br><br>
+    <div id="output"></div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
