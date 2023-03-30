@@ -18,6 +18,7 @@ section{
     width: 450px;
     border-radius: 6px;
     box-shadow: 0 0 10px black;
+    overflow: hidden;
 
 }
 h1{
@@ -54,3 +55,27 @@ button:hover {
     background-color: #c11119;
     transition: 0.7s;
 }
+.paragraph_style{
+    margin: 10px 0;
+    padding: 10px 0;
+    padding-left: 5px;
+    border-radius: 6px;
+    color: white;
+    background-color: #e50914;
+    word-break: break-all;
+    cursor: pointer;
+    animation: anime 0.5s linear;
+}
+.paragraph_style{
+    margin-bottom: 0;
+}
+@keyframes anime{
+    from {
+        transform: translate(50px);
+    }
+}
+.paragraph_click{
+    background-color: #d3a7a9;
+    text-decoration: line-through;
+}
+
