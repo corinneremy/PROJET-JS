@@ -1,0 +1,20 @@
+
+const addToDoButton = document.querySelector('#addToDo');
+const toDoContainer = document.querySelector('#toDoContainer');
+const inputField = document.querySelector('#inputField');
+
+
+addToDoButton.onclick = function(){
+    let paragraph = null;
+    console.log(inputField.value);
+    // check if input is not empty
+    if(inputField.value != ""){
+        // if input is not empty, create a paragraph
+        paragraph = document.createElement('p')
+    }
+    //value this paragraph with input content  
+    paragraph.innerText = inputField.value ;
+
+    // insert paragraph into toDoContainer element
+    toDoContainer.appendChild(paragraph);
+}
