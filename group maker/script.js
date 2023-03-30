@@ -1,19 +1,35 @@
-function generer() {
-	var nom = document.getElementById("nom").value;
-	var membres = document.getElementById("membres").value;
-	var genre = document.getElementById("genre").value;
+function makeGroups() {
+    let names = document.querySelector("#input").value.trim().split(",");
+    let groupCount = parseInt(document.querySelector("#groupCount").value);
+    let groups = [];
 
-	var resultat = "Le groupe " + nom + " est un groupe ";
+    // Mélanger les noms
+    for (let i = names.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = names[i];
+        names[i] = names[j];
+        names[j] = temp;
+    }
 
-	if (genre == "mixte") {
-		resultat += "mixte ";
-	} else if (genre == "masculin") {
-		resultat += "masculin ";
-	} else {
-		resultat += "féminin ";
-	}
+    // Répartir les noms dans les groupes
+    let groupSize = Math.ceil(names.length / groupCount);
+    for (let i = 0; i < groupCount; i++) {
+        let start = i * groupSize;
+        let end = start + groupSize;
+        groups.push(names.slice(start, end));
+    }
 
-	resultat += "de " + membres + " membres.";
-
-	document.getElementById("resultat").innerHTML = resultat;
+    // Affichage des groupes
+    let outputDiv = document.querySelector("#output");
+    outputDiv.innerHTML = "";
+    for (let i = 0; i < groups.length; i++) {
+        let groupDiv = document.createElement("div");
+        groupDiv.className = "group";
+        for (let j = 0; j < groups[i].length; j++) {
+            let nameSpan = document.createElement("span");
+            nameSpan.innerHTML = groups[i][j];
+            groupDiv.appendChild(nameSpan);
+        }
+        outputDiv.appendChild(groupDiv);
+    }
 }
